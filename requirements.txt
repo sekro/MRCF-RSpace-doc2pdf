@@ -1,0 +1,4 @@
+beautifulsoup4==4.15.0
+pathvalidate==3.3.1
+rspace_client==2.7.4
+weasyprint==70.0

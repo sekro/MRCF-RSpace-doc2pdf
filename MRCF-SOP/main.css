@@ -1,0 +1,155 @@
+@page {
+  margin-top: 3.8cm;
+
+  @top-center {
+    content: element(pageHeader);
+    vertical-align: middle;
+    width: 100%;
+    margin-top: 1cm;
+  }
+}
+#pageHeader {
+    position: running(pageHeader);
+}
+
+#pageHeader table {
+  width: 100%;
+  border-collapse: collapse; /* Essential for clean borders */
+  font-family: Arial, sans-serif;
+  font-size: 6pt;
+  border: 1px solid;
+}
+
+#pageHeader th, #pageHeader td {
+  border: 1px solid;
+  padding: 0.1cm;
+  text-align: center;
+}
+
+#pageHeader .pageLogo {
+  background: url(mrcf_logo_small.svg) no-repeat center;
+  background-size: 0.8cm;
+  width: 1cm;
+  height: 2cm;
+}
+
+#pageHeader .headerTitle {
+  font-size: 10pt;
+  height: 1.2cm
+}
+
+#pageHeader .pageCounter {
+  content: counter(page) "/" counter(pages);
+}
+
+html {
+  color: #000000;
+  font-family: "Arial", Helvetica, sans-serif;
+  font-size: 11pt;
+  font-weight: 300;
+  line-height: 1.5;
+}
+body {
+  margin: 0;
+  counter-reset: section;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 14pt;
+  margin-top: 20pt;
+  margin-bottom: 10pt;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  font-weight: bold;
+}
+h2, h3, h4 {
+  color: black;
+  font-weight: bold;
+}
+h2 {
+  break-before: always;
+  font-size: 14pt;
+  margin-top: 20pt;
+  margin-bottom: 10pt;
+  margin-left: 0;
+  margin-right: 0;
+  string-set: heading content();
+}
+h3::before {
+  counter-increment: section;
+  content: counter(section) " ";
+}
+h3 {
+  font-weight: bold;
+  font-size: 14pt;
+  margin-top: 2pt;
+  margin-bottom: 6pt;
+  margin-left: 0;
+  margin-right: 0;
+}
+h4 {
+  font-size: 12pt;
+  margin-top: 2pt;
+  margin-bottom: 2pt;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+#eln section p {
+  text-align: justify;
+  margin-top: 0pt;
+  margin-bottom: 6pt;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+#eln table {
+  width: 100%;
+  border-collapse: collapse; /* Essential for clean borders */
+  font-family: Arial, sans-serif;
+  font-size: 8pt;
+}
+
+#eln table th, #eln table td {
+  padding: 0.1cm;
+  text-align: left;
+  border-bottom: 1px solid #ddd; /* Horizontal lines */
+  border-right: 1px solid #ddd;
+}
+
+#eln table th {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Zebra Striping */
+#eln table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover Effect */
+#eln table tr:hover {
+  background-color: #f1f1f1;
+}
+
+#eln img {
+    max-width: 100%;
+    height: auto;
+}
+@media print {
+    table {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+    img {
+        max-height: 19cm; /* Set a maximum height using print-specific units like cm, in, or mm */
+        max-width: 100%;  /* Ensure the image doesn't exceed the page width */
+        height: auto;     /* Important: Maintains the original aspect ratio */
+        width: auto;      /* Optional, ensures width adjusts with height if needed */
+        display: block;   /* Useful for controlling layout on the printed page */
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "Date of creation": "$DATE$",
+    "Definitions and abbreviations": "$DEFANDABBR$",
+    "Document References": "$DOCREFS$",
+    "Document number": "$DOCNO$",
+    "Procedure": "$PROCEDURE$",
+    "Purpose": "$PURPOSE$",
+    "Replaces document number": "$REPLACEDOC$",
+    "Responsibility and authority": "$RESANDAUTH$",
+    "Scope": "$SCOPE$",
+    "Title": "$SOPTITLE$"
+}

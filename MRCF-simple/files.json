@@ -1,0 +1,9 @@
+{
+    "report_css": "main.css",
+	"report_eln_html": {
+        "MRCF Notebook Entry": "eln_page.html",
+        "MRCF-STD-PREP": "mrcf_std_prep.html",
+        "MRCF-MALDI-matrix-spray": "mrcf_maldi_matrix_spray.html"
+    },
+    "report_html": "main.html"
+}

@@ -1,0 +1,12 @@
+{
+    "MRCF Notebook Entry": {
+        "Date": "$DATE$",
+        "Title": "$TITLE$",
+        "Purpose": "$PURPOSE$",
+        "Materials and Methods": "$MATSMETHODS$",
+        "Procedure": "$PROCEDURE$",
+        "Results": "$RESULTS$",
+        "Conclusion": "$CONCLUSION$",
+        "AttachedFiles": "$ATTFILES$"
+    }
+}

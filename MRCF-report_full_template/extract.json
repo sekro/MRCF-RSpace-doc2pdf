@@ -1,0 +1,43 @@
+{
+    "MRCF Notebook Entry": {
+        "Date": "$DATE$",
+        "Title": "$TITLE$",
+        "Purpose": "$PURPOSE$",
+        "Materials and Methods": "$MATSMETHODS$",
+        "Procedure": "$PROCEDURE$",
+        "Results": "$RESULTS$",
+        "Conclusion": "$CONCLUSION$",
+        "AttachedFiles": "$ATTFILES$"
+    },
+    "MRCF-STD-PREP": {
+        "Title": "$TITLE$",
+        "Prepared": "$PREPARED$",
+        "Expires": "$EXPIRES$",
+        "Storage Temperature": "$STORAGE_TEMPERATURE$",
+        "Signal Word": "$SIGNAL_WORD$",
+        "Hazard statements": "$HAZARD_STATEMENTS$",
+        "GHS hazard pictograms": "$GHS_HAZARD_PICTOGRAMS$",
+        "Material": "$MATERIAL$",
+        "Procedure": "$PROCEDURE$",
+        "Disposal Instructions": "$DISPOSAL_INSTRUCTIONS$"
+    },
+    "MRCF-MALDI-matrix-spray": {
+        "Title": "$TITLE$",
+        "Sprayer": "$SPRAYER$",
+        "Matrix Name": "$MATRIX_NAME$",
+        "Matrix Preparation / Info": "$MATRIX_PREPARATION_INFO$",
+        "Matrix concentration (mg/ml)": "$MATRIX_CONCENTRATION$",
+        "Matrix solvent": "$MATRIX_SOLVENT$",
+        "Nozzle Temperature (\u00b0C)": "$NOZZLE_TEMPERATURE$",
+        "Number of Passes": "$NUMBER_OF_PASSES$",
+        "Flow rate (ml/min)": "$FLOW_RATE$",
+        "Velocity (mm/min)": "$VELOCITY$",
+        "Track Spacing (mm)": "$TRACK_SPACING$",
+        "Pattern": "$PATTERN$",
+        "Drying Time (sec)": "$DRYING_TIME$",
+        "Nozzel Height (mm)": "$NOZZEL_HEIGHT$",
+        "N2 Flow Rate (l/min)": "$N2_FLOW_RATE$",
+        "Pressure (psi)": "$PRESSURE$",
+        "Tray Temperature (\u00b0C)": "$TRAY_TEMPERATURE$"
+    }
+}

@@ -1,0 +1,210 @@
+@page {
+  @top-left {
+    content: string(heading);
+    font-size: 9pt;
+    height: 1cm;
+    vertical-align: middle;
+    width: 100%;
+  }
+  @top-center {
+    background: #00509e;
+    color: #ffffff;
+    content: '';
+    display: block;
+    height: .05cm;
+    width: 100%;
+  }
+  @top-right {
+    background: #00509e;
+    color: #ffffff;
+    content: counter(page);
+    height: 1cm;
+    text-align: center;
+    width: 1cm;
+  }
+  @bottom-center {
+    background: url(mrcore_logo.svg) no-repeat top center;
+    content: '';
+    height: 1cm;
+    vertical-align: middle;
+    width: 100%;
+  }
+}
+@page :blank {
+  @top-left { background: none; content: '' }
+  @top-center { content: none }
+  @top-right { content: none }
+  @bottom-center { background: none; }
+}
+@page no-chapter {
+  @top-left { background: none; content: none }
+  @top-center { content: none }
+  @top-right { content: none }
+}
+@page :first {
+  background: url(report_cover_mrcf.svg) no-repeat top center;
+  background-size: auto;
+  margin: 0;
+}
+@page chapter {
+  background: #00509e;
+  color: #ffffff;
+  margin: 0;
+  @top-left { content: none }
+  @top-center { content: none }
+  @top-right { content: none }
+}
+
+html {
+  color: #000000;
+  font-family: "Arial", Helvetica, sans-serif;
+  font-size: 11pt;
+  font-weight: 300;
+  line-height: 1.5;
+}
+body {
+  margin: 0;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 38pt;
+  margin: 5cm 2cm 0 2cm;
+  page: no-chapter;
+  width: 100%;
+}
+h2, h3, h4 {
+  color: black;
+  font-weight: 400;
+}
+h2 {
+  break-before: always;
+  font-size: 28pt;
+  string-set: heading content();
+}
+h3 {
+  font-weight: 300;
+  font-size: 15pt;
+}
+h4 {
+  font-size: 13pt;
+}
+
+#cover {
+  align-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  height: 297mm;
+}
+#cover address {
+  background: #ffffff;
+  color: #000000;
+  flex: 1 50%;
+  margin: 0 -1cm;
+  padding: 0cm 0;
+  white-space: pre-wrap;
+  font-style: normal;
+}
+#cover address:first-of-type {
+  padding-left: 2.5cm;
+}
+#contents {
+  break-before: right;
+  break-after: left;
+  page: no-chapter;
+}
+#contents h2 {
+  font-size: 20pt;
+  font-weight: 400;
+  margin-bottom: 3cm;
+}
+#contents h3 {
+  font-weight: 500;
+  margin: 3em 0 1em;
+}
+#contents h3::after {
+  background: #00509e;
+  content: '';
+  display: block;
+  height: .08cm;
+  margin-bottom: .25cm;
+  width: 2cm;
+}
+#contents ul {
+  list-style: none;
+  padding-left: 0;
+}
+#contents ul li {
+  border-bottom: .25pt solid #c1c1c1;
+  margin: .25cm 0;
+  padding-top: .25cm;
+}
+#contents ul li::before {
+  color: #00509e;
+  content: '• ';
+  font-size: 20pt;
+  line-height: 16pt;
+  vertical-align: bottom;
+}
+#contents ul li a {
+  color: inherit;
+  text-decoration-line: inherit;
+}
+#contents ul li a::before {
+  content: target-text(attr(href));
+}
+#contents ul li a::after {
+  color: #00509e;
+  content: target-counter(attr(href), page);
+  float: right;
+}
+
+#eln section {
+  columns: 1;
+  column-gap: 1cm;
+  padding-top: 1cm;
+}
+#eln section p {
+  text-align: justify;
+}
+#eln section p:first-of-type {
+  font-weight: 700;
+}
+table {
+  width: 100%;
+  border-collapse: collapse; /* Essential for clean borders */
+  font-family: Arial, sans-serif;
+  font-size: 8pt;
+}
+
+table th, table td {
+  padding: 0.1cm;
+  text-align: left;
+  border-bottom: 1px solid #ddd; /* Horizontal lines */
+  border-right: 1px solid #ddd;
+}
+
+table th {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Zebra Striping */
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover Effect */
+table tr:hover {
+  background-color: #f1f1f1;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+@media print {
+    table {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "report_css": "main.css",
+    "report_eln_html": {
+        "MRCF Notebook Entry": "eln_page.html"
+    },
+    "report_html": "main.html",
+    "report_toc_html": "toc.html"
+}
